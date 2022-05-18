@@ -1,3 +1,5 @@
 import validator from './validator.js';
 
-console.log(validator);
+let cardNumber = document.getElementById('cardN');
+
+console.log(validator.isValid(cardNumber));
