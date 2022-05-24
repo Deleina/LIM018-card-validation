@@ -1,5 +1,19 @@
 import validator from './validator.js';
 
-let cardNumber = document.getElementById('cardN');
+let creditCardNumber = document.getElementById('inputNumber');
+//let date = document.getElementById('date')
+//let nameUser = document.getElementById('name')
+//let cvv = document.getElementById('cvv')
+let btn = document.getElementById('btn')
+//console.log(btn)
 
-console.log(validator.isValid(cardNumber));
+btn.addEventListener('click', ()=> {
+    let result = validator.isValid(creditCardNumber.value);
+    if (result===true) {
+        alert('la tarjeta es valida')
+    }else{
+        alert('la tarjeta es invalida')
+    }
+})
+
+
