@@ -25,6 +25,7 @@ creditCardNumber.addEventListener('blur', ()=> {
 
 creditCardNumber.addEventListener('focus', ()=>{
     creditCardNumber.value= "";
+    valorInput=""
 })
 
 
