@@ -1,8 +1,8 @@
 //objeto
 const validator = {
-  isValid:function cardNumber(creditCardNumber) {
+  isValid:function(creditCardNumber) {
     //variable que guarda el valor de creditCardNumber
-    const creditcard = creditCardNumber.split("");
+    const creditcard = creditCardNumber.split("").reverse();
 
     //array que guarda resultados 
     let arrayN= [];
@@ -12,13 +12,12 @@ const validator = {
         let valor = creditcard[i];
         //variable que guardara multiplicacion  
         let valorMultiplicado =0;
-
       if (i===0){
-          valorMultiplicado=valor * 2;   
-      } else if (i % 2 === 0){
+         valorMultiplicado=valor *1;   
+      } else if (i%2 === 1){
           valorMultiplicado=valor* 2;  
       }else{
-          valorMultiplicado=valor * 1 //numeros impar
+          valorMultiplicado=valor * 1;
       }
 
       //variable que almacena resultados de lamultplicacion,se convierte en string
@@ -43,13 +42,23 @@ const validator = {
   const sumaTotal=arrayN.reduce((count, item)=> count + item, 0);
 
     let sumaString = sumaTotal.toString();
-    console.log(sumaTotal);
+
     if (sumaString.charAt(sumaString.length - 1) === '0') {
       return true;
     } else{
       return false;
     }
-  }    
+  },
+  maskify:function(creditCardNumber) {
+    let cortar=creditCardNumber.slice(-4);
+    let countNum="";
+    
+    for (let i = 0; i <(creditCardNumber.length)-4; i++) {
+         countNum += "#";
+         console.log(countNum)
+    }
+    return countNum+cortar
+  }
 }
 
 export default validator;
