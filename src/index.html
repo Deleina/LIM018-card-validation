@@ -6,24 +6,30 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-        <label for="numberT">Numero de Tarjeta</label> <br>
-        <input  id="inputNumber" type="text" name="numberT"  placeholder="000000">
-        <br>
-
-        <label for="dueDate">Fecha de Vencimiento</label> <br>
-        <input id="date" type="text" name="dueDate">
-        <br>
-
-        <label for="name">Nombre y Apellido</label> <br>
-        <input id="name" type="text" name="name">
-        <br>
-
-        <label for="cvv">CVV</label> <br>
-        <input id="cvv" type="text" name="cvv">
-        <br>
-
-        <button id="btn" type="submit">COMPRAR</button>
     
+      
+
+        <div class="info-valid">
+
+          <h1>Validador de Tarjetas de Credito Online</h1>
+          <div>
+            <img src="credit-card.png" alt="">
+          </div>
+          <form action="#">
+            <input class="controls" id="inputNumber" type="text" name="numberT"  placeholder="Ingrese Numero de Tarjeta" required>        
+            <input class="controls" id="nombre" type="text" name="name"  placeholder="Nombre y Apellido" required>
+            <input class="controls" id="fecha" type="email" name="fecha"  placeholder="Fecha de Expiracion" required>        
+            <input class="controls" id="Cvv" type="cvv" name="cvv"  placeholder="CVV" required>
+          </form>
+          <button type="submit" id="btn">Validar</button>
+        </div>
+            
+  
+                  
+      
+
+        
+    </div>
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>

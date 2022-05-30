@@ -20,7 +20,7 @@ const validator = {
           valorMultiplicado=valor * 1;
       }
 
-      //variable que almacena resultados de lamultplicacion,se convierte en string
+      //
       let stringMultiplicado= valorMultiplicado.toString();
 
       //longitud de variable strinngMultiplicado es mayor >1  se localiza el primer y segundo indice *1 y se suma las variables en la que se guarda
@@ -28,7 +28,6 @@ const validator = {
           const digit1 =stringMultiplicado.charAt(0)*1;
           const digit2 = stringMultiplicado.charAt(1)*1;
           const resultDigit= digit1+digit2;
-        
           //se agrega al arrayN
           arrayN.push(resultDigit)
       }else{
@@ -53,7 +52,7 @@ const validator = {
     let cortar=creditCardNumber.slice(-4);
     let countNum="";
     
-    for (let i = 0; i <(creditCardNumber.length)-4; i++) {
+    for(let i = 0; i <(creditCardNumber.length)-4; i++) {
          countNum += "#";
          console.log(countNum)
     }
