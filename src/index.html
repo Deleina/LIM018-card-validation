@@ -15,13 +15,15 @@
           <div>
             <img src="credit-card.png" alt="">
           </div>
-          <form action="#">
+          <form action="#" id="formElement">
             <input class="controls" id="inputNumber" type="text" name="numberT"  placeholder="Ingrese Numero de Tarjeta" required>        
-            <input class="controls" id="nombre" type="text" name="name"  placeholder="Nombre y Apellido" required>
-            <input class="controls" id="fecha" type="email" name="fecha"  placeholder="Fecha de Expiracion" required>        
-            <input class="controls" id="Cvv" type="cvv" name="cvv"  placeholder="CVV" required>
+            <input class="controls" id="name" type="text" name="name"  placeholder="Nombre y Apellido" required>
+            <input class="controls" id="date" type="month" name="fecha"  placeholder="Fecha de Expiracion" required>        
+            <input class="controls" id="cvv" type="cvv" name="cvv"  placeholder="CVV" required>
+            <button type="submit" id="btn">Validar</button>
           </form>
-          <button type="submit" id="btn">Validar</button>
+          <div id="mensaje-de-resultado"></div>
+          
         </div>
             
   
