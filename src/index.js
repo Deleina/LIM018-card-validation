@@ -15,17 +15,12 @@ form.addEventListener('submit', (event)=> {
     const mensaje = [];
     let result = validator.isValid(valorInput);
     if (result===true) {
-        //alert('la tarjeta es valida')
         mensaje.push('la tarjeta es valida')
     }else{
-        //alert('la tarjeta es invalida')
         mensaje.push('la tarjeta es invalida')
     }
 
     mensajeDeResultdo.innerHTML=mensaje.join(',')
-
-
-    //return false;
 })
 
 creditCardNumber.addEventListener('blur', ()=> {
