@@ -1,15 +1,12 @@
 import validator from './validator.js';
-
+//referencia a elementos HTML
 let creditCardNumber = document.getElementById('inputNumber');
 let form = document.getElementById('formElement')
-//let date = document.getElementById('date')
-//let name = document.getElementById('name')
-//let cvv = document.getElementById('cvv')
 let mensajeDeResultdo = document.getElementById('mensaje-de-resultado')
-//let btn = document.getElementById('btn')
-//console.log(btn)
+
 let valorInput ="";
 
+//Evento submit, preventDefault, para que el form no carge por defecto 
 form.addEventListener('submit', (event)=> {
     event.preventDefault();
     const mensaje = [];
@@ -20,14 +17,20 @@ form.addEventListener('submit', (event)=> {
         mensaje.push('la tarjeta es invalida')
     }
 
+    //agregando el mensaje al html 
     mensajeDeResultdo.innerHTML=mensaje.join(',')
 })
+
+
+//evento focus se dispara cuando se activa el control o toma foco.
+// el evento blur se dispara cuando pierde el foco el control.
 
 creditCardNumber.addEventListener('blur', ()=> {
     valorInput=creditCardNumber.value;
     let resultadoMaskify=validator.maskify(valorInput);
     creditCardNumber.value=resultadoMaskify;
 })
+
 
 creditCardNumber.addEventListener('focus', ()=>{
     creditCardNumber.value= "";
